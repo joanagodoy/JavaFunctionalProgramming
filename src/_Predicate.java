@@ -1,6 +1,6 @@
 import java.util.function.Predicate;
 
-public class _Predicate {
+public class _Predicate {//Return boolean
 
     public static void main(String[] args) {
         System.out.println("Without Predicate");
