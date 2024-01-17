@@ -1,4 +1,7 @@
+import org.ietf.jgss.GSSName;
+
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class _Streams {
@@ -22,6 +25,18 @@ public class _Streams {
                 .map(person -> person.name)
                 .mapToInt(String::length)
                 .forEach(System.out::println);
+
+        Predicate<Person> personPredicate = person -> Gender.FEMALE.equals(person.gender);
+
+        System.out.println(people.stream()
+                .anyMatch(personPredicate));
+
+        System.out.println(people.stream()
+                .allMatch(personPredicate));
+
+        System.out.println(people.stream()
+                .noneMatch(personPredicate));
+
     }
 
     static class Person {
