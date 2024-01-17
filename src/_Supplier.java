@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.function.Supplier;
 
-public class _Supplier {//Represents a supplier of results
+public class _Supplier {//Takes no arguments and supplies values
 
     public static void main(String[] args) {
         System.out.println(getDBConnection());
